@@ -45,4 +45,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // e uma relação de um utilizador possui 1 empregador
+     public function employer()
+    {
+        return $this->hasOne(Employer::class);
+    }
 }
